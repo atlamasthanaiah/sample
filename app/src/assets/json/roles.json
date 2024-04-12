@@ -1,0 +1,6 @@
+[
+    { "name": "admin"},
+    { "name": "creator"},
+    { "name": "fundamental"},
+    { "name": "user"}
+]
