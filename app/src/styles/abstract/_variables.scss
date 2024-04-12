@@ -1,0 +1,39 @@
+:root,
+[data-theme='default'] {
+    //font
+    --amy-font-size-1 : 1px;
+    --amy-font-size-2 : 2px;
+    --amy-font-size-3 : 3px;
+    --amy-font-size-4 : 4px;
+    --amy-font-size-5 : 5px;
+    --amy-font-size-10 : 10px;
+    --amy-font-size-15 : 15px;
+    --amy-font-size-20 : 20px;
+    --amy-font-size-25 : 25px;
+    --amy-font-size-30 : 30px;
+    --amy-font-size-1r : 1rem;
+    --amy-font-size-2r : 2rem;
+    --amy-font-size-3r : 3rem;
+    --amy-font-size-4r : 4rem;
+    --amy-font-size-33 : 3.3rem;
+    --amy-font-size-44 : 4.8rem;
+    --amy-font-size-5r : 5rem;
+    --amy-font-size-6r : 6rem;
+    --amy-font-size-28 : 2.8rem;
+
+    //font-weight
+    --amy-font-weight-extralight : 200;
+    --amy-font-weight-light : 300;
+    --amy-font-weight-normal : 400;
+    --amy-font-weight-mediaum : 500;
+    --amy-font-weight-semibold : 600;
+    --amy-font-weight-bold : 700;
+    --amy-font-weight-superbold : 800;
+    --amy-font-weight-smal : 100;
+
+    //link colors
+    --amy-link : var(--amy-color-blue);
+    --amy-link-visited : var(--amy-color-purple)
+
+    
+}
