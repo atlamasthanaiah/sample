@@ -40,8 +40,8 @@ const component = [
 
 @NgModule({
   declarations: [ ...component ],
-//   exports : [ ...module, ...component, ...services],
-//   imports: [ ...module ],
+  exports : [ ...module, ...component],
+  imports: [ ...module ],
 //   providers : [...services ]
 })
 export class SharedModule { }

@@ -2,6 +2,12 @@ export class RoutesPath {
     static Home = {
         base:{
             path: 'Home'
+        },
+        home:{
+            path: 'home'
+        },
+        signin:{
+            path: 'signin'
         }
     };
     static PATHMATCH = 'full';
