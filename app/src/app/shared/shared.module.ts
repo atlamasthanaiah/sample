@@ -5,12 +5,15 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core'; 
 // import { TranslateModule } from '@ngx-translate/core';  
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 // import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CustomRegisterModule } from './module/custom-registry.module';
+import { NavComponent } from './components/nav/nav.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 // import { AgGridModule } from 'ag-grid-angular';
 
 
@@ -20,7 +23,7 @@ const module = [
   ReactiveFormsModule,
   HttpClientModule,
   RouterModule,
-  // TranslateModule,
+  TranslateModule,
   // AgGridModule,
   MatSnackBarModule,
   MatSortModule,
@@ -30,7 +33,9 @@ const module = [
 
 const component = [
  SignupComponent,
- LoginComponent
+ LoginComponent,
+ NavComponent,
+ SidebarComponent
 ]
 
 // const services = [

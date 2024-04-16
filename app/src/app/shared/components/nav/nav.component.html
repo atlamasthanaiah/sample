@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="header">
+      <span class="header-subtitle">{{ envName }}</span>
+    </div>
+    <div class="collapse navbar-collapse d-flex justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <select class="list-items" #selectedLang (change)="switchLang(selectedLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">
+              {{ language }}
+            </option>
+          </select>
+        </li>
+        <li class="nav-item">
+          <button mat-raised-button>{{ 'HOME.HELP' | translate }}</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button>
+            <mat-icon>exit_to_app</mat-icon>
+            {{ 'LOGIN.LOG_OUT' | translate }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <atla-sidebar></atla-sidebar>
+  
+  <!-- <atla-login></atla-login> -->
