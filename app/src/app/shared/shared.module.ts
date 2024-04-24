@@ -14,6 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CustomRegisterModule } from './module/custom-registry.module';
 import { NavComponent } from './components/nav/nav.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 // import { AgGridModule } from 'ag-grid-angular';
 
 
@@ -24,7 +25,7 @@ const module = [
   HttpClientModule,
   RouterModule,
   TranslateModule,
-  // AgGridModule,
+  // FlexLayoutModule,
   MatSnackBarModule,
   MatSortModule,
   MatProgressSpinnerModule,

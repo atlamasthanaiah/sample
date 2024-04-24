@@ -16,7 +16,8 @@ export const Message = {
     EERROR_KEY : 'Error',
     LOGIN_SUCESS_KEY : 'login successfully',
     SUCCESS : 'Success',
-    CANDEACTIVE_SCREEN_CONFIRMATION : 'Are you want leave this page!'
+    CANDEACTIVE_SCREEN_CONFIRMATION : 'Are you want leave this page!',
+    SININ_SUCESS_KEY : 'Signin successfully'
 }
 
 export const NonmagicNumber = {
@@ -26,5 +27,8 @@ export const NonmagicNumber = {
     HUNDRED : 100,
     TWO : 2,
     EHIGHT : 8,
-    TWENTY : 22
+    TWENTY : 22,
+    FIVE : 5,
+    TWENTIFIVE: 25,
+    SIX : 6,
 }

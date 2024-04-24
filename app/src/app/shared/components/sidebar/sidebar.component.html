@@ -9,7 +9,7 @@
                 <div>
                     <a *ngIf="nav?.type === 'link' || nav.type === 'menu'" mat-list-item [routerLink]="[nav?.route]" routerLinkActivate="active">
                         <mat-icon >{{nav.icon}}</mat-icon>
-                        <span class="full-width" *ngIf="expanded || isShowing">{{ (nav.title || '') | translate }}</span>
+                        <span class="full-width" *ngIf="expanded || isShowing">{{ (nav.title) | translate }}</span>
                         <!-- <span class="full-width"  *ngIf="expanded || isShowing">{{nav.title | translate}}</span> -->
                         <!-- <span class="full-width"  *ngIf="(sidenaveState$ | async)?.sidbaropen">{{nav.title | translate}}</span> -->
                         

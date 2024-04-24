@@ -3,11 +3,14 @@ export class RoutesPath {
         base:{
             path: 'Home'
         },
-        home:{
-            path: 'home'
-        },
+        // home:{
+        //     path: 'home'
+        // },
         signin:{
             path: 'signin'
+        },
+        login:{
+            path: 'login'
         }
     };
     static PATHMATCH = 'full';

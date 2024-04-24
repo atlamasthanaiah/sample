@@ -5,12 +5,14 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     ForgotpasswordComponent,
     SigninComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
