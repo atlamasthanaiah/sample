@@ -37,16 +37,17 @@ mat-sidenav-container {
 //     display: flex;
 //     background-color: var(--amy-color-whitesmoke) !important;
 // }
-.mat-list-base .mat-list-item{
-    color: black;
-    &:hover{
-        background-color: var(--amy-color-whitesmoke);
-    }
-}
-.active{
-    background-color: var(--amy-color-whitesmoke);
 
-}
+// .mat-list-base .mat-list-item{
+//     color: black;
+//     &:hover{
+//         background-color: var(--amy-color-whitesmoke);
+//     }
+// }
+// .active{
+//     background-color: var(--amy-color-whitesmoke);
+
+// }
 
 
 
@@ -74,7 +75,7 @@ mat-sidenav-container {
 }
 
 .full-width {
-   width: 100% !important;
+   width: auto !important;
 }
 
 .mat-sidenav{

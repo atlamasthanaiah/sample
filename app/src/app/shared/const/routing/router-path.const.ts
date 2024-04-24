@@ -69,8 +69,8 @@ export class RoutesPath {
             path : 'student'
         },
 
-        student : {
-            path : 'student'
+        stdregistration : {
+            path : 'stdregistration'
         },
 
         meditation : {
