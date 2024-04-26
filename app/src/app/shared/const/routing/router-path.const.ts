@@ -81,11 +81,11 @@ export class RoutesPath {
     static employee = {
 
         base : {
-            path : 'gridTable'
+            path : 'employee'
         },
 
-        employee : {
-            path : 'employee'
+        emptable : {
+            path : 'emptable'
         },
 
         meditation : {
@@ -111,7 +111,7 @@ export class RoutesPath {
        
     }
 
-    static TraingDetails = {
+    static traingDetails = {
 
         base : {
             path : 'training'

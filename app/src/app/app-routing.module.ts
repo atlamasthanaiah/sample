@@ -16,6 +16,26 @@ const routes: Routes = [
   {
     loadChildren: () => import('./student/student.module').then(m=>m.StudentModule),
     path:RoutesPath.student.base.path
+  },
+
+  {
+    loadChildren: () => import('./estimation/estimation.module').then(m=>m.EstimationModule),
+    path:RoutesPath.estimation.base.path
+  },
+
+  {
+    loadChildren: () => import('./hr/hr.module').then(m=>m.HrModule),
+    path:RoutesPath.HRDetail.base.path
+  },
+
+  {
+    loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule),
+    path:RoutesPath.employee.base.path
+  },
+
+  {
+    loadChildren: () => import('./training/training.module').then(m => m.TrainingModule),
+    path: RoutesPath.traingDetails.base.path
   }
 ];
 
