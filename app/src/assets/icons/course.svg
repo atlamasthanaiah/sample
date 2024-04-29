@@ -1,1 +1,5 @@
-<mat-icon>alarm</mat-icon>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path fill="none" d="M0 0h24v24H0z"/>
+    <path d="M20 10.18V19H4V5h9.03A5.995 5.995 0 0 1 17 11c0 1.03-.26 2.03-.74 2.89L15 13.17V12l3-2-3-2v1.17L16.27 9H13c-1.1 0-2 .9-2 2s.9 2 2 2h5v2.18l2 1.2z"/>
+</svg>
+<!-- <mat-icon>alarm</mat-icon> -->

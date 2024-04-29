@@ -13,14 +13,15 @@ export const appWorkSpaceRoutes : SidenavRoutes [] = [
         type : 'link'
     },
     {
-        icon : 'create-project',
+        icon : 'home',
+        // icon : 'create-project',
         route : RoutesPath.sideNav.base.path+ '/'+ RoutesPath.sideNav.CREATE_PROJECT.path,
         // route : '${RoutesPath.sideNav.base.path}/${RoutesPath.sideNav.CREATE_PROJECT.path}',
         title : 'CREATE_PROJECT',  /// we csn find this in en.json file (same name for language translation)
         type : 'link'
     },
     {
-        icon : 'create-project',
+        icon : 'home',
         // icon : 'all-project',
         route : RoutesPath.sideNav.base.path + '/' + RoutesPath.sideNav.ALL_PROJECT.path,
         // route : '${RoutesPath.sideNav.base.path}/${RoutesPath.sideNav.ALL_PROJECT.path}',
@@ -28,7 +29,7 @@ export const appWorkSpaceRoutes : SidenavRoutes [] = [
         type : 'link'
     },
     {
-        icon : 'create-project',
+        icon : 'home',
         // icon : 'dmm-offer',
         route : RoutesPath.sideNav.base.path + '/'+ RoutesPath.sideNav.DMM_OFFER.path,
         // route : '${RoutesPath.sideNav.base.path}/${RoutesPath.sideNav.DMM-OFFER.path}',
@@ -45,7 +46,7 @@ export const appWorkSpaceRoutes : SidenavRoutes [] = [
     },
     {
        
-        icon : 'home',
+        icon : 'course',
         route : RoutesPath.sideNav.base.path + '/' + RoutesPath.sideNav.CONTACT.path,
         // route : '${RoutesPath.sideNav.base.path}/${RoutesPath.sideNav.CONTACT.path}',
         title : 'CONTACT',  /// we can find this in en.json file (same name for language translation)

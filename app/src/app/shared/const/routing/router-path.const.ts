@@ -99,11 +99,11 @@ export class RoutesPath {
             path : 'estimation'
         },
 
-        virtualscroll : {
-            path: 'virtualscroll'
+        n2estimation : {
+            path: 'n2estimation'
         },
-        infinity_scroll:{
-            path : 'infinityscroll'
+        n3estimation:{
+            path : 'n3estimation'
         },
         result : {
             path : 'result'
