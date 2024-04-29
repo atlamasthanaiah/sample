@@ -120,7 +120,7 @@ export class RoutesPath {
         liveproject : {
             path : 'liveproject'
         },
-        intership : {
+        internship : {
             path : 'internship'
         },
         meditation : {
