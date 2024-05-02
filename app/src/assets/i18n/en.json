@@ -7,11 +7,23 @@
     "BASIC_HOME" : "Home",
     
     "LOGIN":{
+        "LOGIN_SCREEN" : "Login Acreen",
         "USR_NAME": "userName",
         "PASSWORD" : "password",
-        "LOGIN" : "Login",
-        "LOG_OUT" : "LogOut"
+        "LOG_IN" : "Login",
+        "LOG_OUT" : "LogOut",
+        "SIGNIN" : "Signin"
     },
+
+    "SIGNIN" : {
+        "SIGNUP_SCEEN" : "SignUp Screen",
+        "ENTER_NAME" : "Enter Name",
+        "ENTER_EMAIL" : "Enter Email",
+        "ENTER_USERNAME" : "Enter UserName",
+        "ENTER_PASSWORD" : "Enter Password",
+        "ENTER_PHONE" : "Enter Phone"
+    },
+
     "HOME":{
         "HOME" : "Home",
         "HELP" : "Help",
@@ -114,5 +126,22 @@
         "COURSE_START_DATE" : "Course Start Date",
         "COURSE_END_DATE" : "Course End Date",
         "TIME" : "Time"
+    },
+
+    "DATES" :{
+        "START_DATE" : "Start Date",
+        "END_DATE" : "End Date",
+        "Date_Of-Birth" : "Date Of Birth",
+        "CF" : "CF",
+        "MF" : "MF",
+        "MA" : "MA",
+        "DATE-FIELD-8" : "Date Field8",
+        "DATE-FIELD-9" : "Date Field9",
+        "DATE-FIELD-10" : "Date Field10",
+        "DATE-FIELD-11" : "Date Field11",
+        "DATE-FIELD-12" : "Date Field12",
+        "DATE-FIELD-13" : "Date Field13",
+        "DATE-FIELD-19" : "Date Field19"
+
     }
 }

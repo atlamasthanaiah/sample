@@ -1,0 +1,15 @@
+.card{
+    max-width: 100%;
+    width: 500px;
+    border-radius: 8px;
+    border: 1px solid var(--amy-color-orange) !important;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix{
+    padding: 1em 0 1em 0;
+    height: 50px !important;
+}

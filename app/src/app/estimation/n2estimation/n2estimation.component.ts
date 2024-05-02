@@ -11,5 +11,5 @@ export class N2estimationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
