@@ -12,8 +12,9 @@ mat-label{
 }
 
 ::ng-deep .mat-form-field{
-    float: right;
-    display: flex;
+    
+    display: block !important;
+    // float: right;
     margin-left: var(--amy-font-size-10);
     margin-right: var(--amy-font-size-10);
 }
@@ -22,8 +23,8 @@ mat-label{
     margin-left:  var(--amy-font-size-10);
     margin-right:  var(--amy-font-size-10);
     --mat-mdc-form-field-floating-label-scale: 0.75;
-    display: flex; 
-    flex-direction: column;
+    // display: flex; 
+    // flex-direction: column;
     min-width: 0;
     text-align: left;
 }
