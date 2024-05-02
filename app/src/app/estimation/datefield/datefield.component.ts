@@ -14,7 +14,7 @@ export class DatefieldComponent implements OnInit {
   // this example is used to dynamic form control names 
   //  we can iterate data through forEach loop
   constructor( private fb: FormBuilder, private translate: TranslateService ) { }
-
+  
   fieldNames = [
     'Startdate',
     'EndDate',
@@ -51,7 +51,7 @@ export class DatefieldComponent implements OnInit {
     console.log('User registered successfully!', userData);
   }
 
-  getTranslatedFieldName(fields: string): string {
-    return this.translate.instant(`DATES.${fields}`);
-  }
+  // getTranslatedFieldName(fieldName: string): string {
+  //   return this.translate.instant(`DATES.${fieldName}`);
+  // }
 }
