@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormArray, FormGroup, FormControl, Validators, MaxLengthValidator } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NonmagicNumber } from 'src/app/shared/const/global/app.const';
+import { NonmagicNumber, Roles } from 'src/app/shared/const/global/app.const';
 import { NotificationService } from 'src/app/shared/service/notification.service';
 
 @Component({
@@ -27,8 +27,12 @@ export class StdregistrationComponent implements OnInit {
   }
 
   saveStudentForm() {
+    // if (Roles === "Administrator"){
+
+    // }
     // if(Roles === Roles.Fundamental){}
     this.studentForm = this._fb.group({
+      
       firstName: ['', [Validators.required, Validators.maxLength(NonmagicNumber.EHIGHT), Validators.pattern(this.charactutePattern)]],
       lastName: ['', [Validators.required, Validators.maxLength(NonmagicNumber.TWENTY), Validators.pattern(this.charactutePattern)]],
       gender : [],
