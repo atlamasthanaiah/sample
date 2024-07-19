@@ -49,7 +49,7 @@ export class RoutesPath {
         },
         
         CONTACT : {
-            path : 'conact'
+            path : 'contact'
         },
         CREATE_PROJECT: {
             path : 'create-project',
