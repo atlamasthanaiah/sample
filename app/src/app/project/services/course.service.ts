@@ -26,6 +26,10 @@ export class CourseService {
     return this.http.get('../../../assets/json/stdList.json')
   }
 
+  // getSListbyid(id){
+  //   return this.http.get('../../../assets/json/stdList.json/id')
+  // }
+
   //   loginDetails(){
   //     return this.http.get('../../../assets/json/login.json')
   //   }

@@ -16,7 +16,6 @@
                     <div>
                         <mat-label>{{'STUDENT.FIRST_NAME' | translate}}</mat-label>
                         <mat-form-field appearance="outline" class="example-full-width">
-                            <!-- <mat-label>FirstName</mat-label> -->
                             <input matInput placeholder="EnterFirstName" formControlName="firstName" id="firstName">                      
                         </mat-form-field>
                         <div *ngIf="studentForm.controls['firstName'].invalid && (studentForm.controls['firstName'].dirty || studentForm.controls['firstName'].touched)" class="alert alert-danger">
