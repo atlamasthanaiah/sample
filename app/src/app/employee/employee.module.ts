@@ -3,17 +3,23 @@ import { CommonModule } from '@angular/common';
 import { EmptableComponent } from './emptable/emptable.component';
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { MatIconModule } from '@angular/material/icon';
 
+const components = [
+  EmptableComponent,
+  AddemployeeComponent
+]
+
+const imports = [
+  CommonModule,
+  EmployeeRoutingModule,
+  SharedModule
+]
 
 @NgModule({
-  declarations: [
-    EmptableComponent
-  ],
-
-  imports: [
-    CommonModule,
-    EmployeeRoutingModule,
-    SharedModule
-  ]
+  declarations: [ ...components],
+  imports: [ ...imports ],
+  // providers: [ ...providers ]
 })
 export class EmployeeModule { }

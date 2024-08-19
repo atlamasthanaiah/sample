@@ -88,6 +88,10 @@ export class RoutesPath {
             path : 'emptable'
         },
 
+        addemployee : {
+            path : 'addemployee'
+        },
+
         meditation : {
             path : 'meditation'
         },
