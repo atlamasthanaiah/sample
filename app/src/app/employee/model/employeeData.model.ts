@@ -1,7 +1,8 @@
 export interface Employee {
-    id : number;
+    id : string;
     name : string;
-    salary : number;
-    exp : number;
+    gender : string;
+    salary : string;
+    exp : string;
 
 }

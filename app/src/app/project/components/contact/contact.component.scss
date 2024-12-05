@@ -1,0 +1,49 @@
+
+
+
+
+.mat-dialog-content{
+  justify-content: flex-end;
+}
+
+
+.footer {
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: rgb(160, 82, 45);
+    color: white;
+    padding: 3px 15px;
+}
+/* Only show header when minimized */
+// .minimized {
+//     height: 40px; 
+//   }
+
+// adding new desing
+
+// .chat-popup {
+//     position: fixed;
+//     bottom: 20px;
+//     right: 20px;
+//     max-width: 300px;
+//     z-index: 1050; 
+//   }
+//   .chat-header {
+//     background-color: #0d6efd;
+//     color: white;
+//     padding: 10px;
+//     border-radius: 5px 5px 0 0;
+//   }
+//   .chat-body {
+//     background-color: #f8f9fa;
+//     padding: 10px;
+//     border: 1px solid #ddd;
+//     border-top: none;
+//     border-radius: 0 0 5px 5px;
+//   }
+//   .chat-toggle {
+//     position: fixed;
+//     bottom: 20px;
+//     right: 20px;
+//     z-index: 1050;
+//   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { DateService } from 'src/app/shared/service/date.service';
 
 @Component({
   selector: 'atla-datefield',
@@ -11,8 +12,6 @@ export class DatefieldComponent implements OnInit {
 
   public dateForm: FormGroup
   
-  // this example is used to dynamic form control names 
-  //  we can iterate data through forEach loop
   constructor( private fb: FormBuilder, private translate: TranslateService ) { }
   
   fieldNames = [
@@ -33,18 +32,23 @@ export class DatefieldComponent implements OnInit {
     'dateField19'
   ];
 
+  /* angular life cycle.  */
   ngOnInit(): void {
     this.createDateForm();
   }
 
+  /* iterating the all date input fielld with help of form builder */
   createDateForm() {
-    this.dateForm = this.fb.group({})
-
-    this.fieldNames.forEach((fields) => {
-      this.dateForm.addControl(fields, this.fb.control(''))
-    })
+    this.dateForm = this.fb.group({});
+    this.fieldNames.forEach((field) => {
+      this.dateForm.addControl(
+        field,
+        this.fb.control('')
+      );
+    });
   }
-
+  
+  /* after saving the data to see in console (example of local storage) */
   saveForm() {
     const userData = this.dateForm.value;
     localStorage.setItem('userData', JSON.stringify(userData));

@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { CustomRegisterModule } from '../shared/module/custom-registry.module';
+import { ContactDialogComponent } from './components/contact-dialog/contact-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 const _components = [
@@ -18,7 +20,8 @@ const _components = [
   ContactComponent,
   CourseComponent,
   CreateProjectComponent,
-  DmmOfferComponent
+  DmmOfferComponent,
+  ContactDialogComponent
 ]
 
 const _modules= [
@@ -29,6 +32,7 @@ const _modules= [
   ReactiveFormsModule,
   MatTableModule,
   MatSortModule,
+  MatDialogModule,
   CustomRegisterModule
 ]
 
