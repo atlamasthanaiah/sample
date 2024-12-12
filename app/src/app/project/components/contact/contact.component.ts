@@ -13,9 +13,15 @@ export class ContactComponent {
   newMessage: string = '';
   isMinimized = true;
   
+  isChatVisible: boolean = false;
   name:any;
   animal:any;
   constructor(public dialog: MatDialog) {}
+
+  toggleChat() {
+    this.isChatVisible = !this.isChatVisible;
+  }
+
   // checking this code
   // sendMessage() {
   //   if (this.newMessage.trim()) {
@@ -30,18 +36,13 @@ export class ContactComponent {
   // }
 
   // ending
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ContactDialogComponent, {
-      width: '350px',
-      height: '350px',
-      // left: '10px',
-      // right: `40px`
-      // data: {name: this.name, animal: this.animal}
-    });
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(ContactDialogComponent, {
+  //     width: '350px',
+  //     height: '350px',
+      
+  //   });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   this.animal = result;
-    // });
-  }
+    
+  // }
 }

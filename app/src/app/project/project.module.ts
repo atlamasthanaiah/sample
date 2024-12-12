@@ -13,6 +13,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { CustomRegisterModule } from '../shared/module/custom-registry.module';
 import { ContactDialogComponent } from './components/contact-dialog/contact-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 const _components = [
@@ -33,7 +34,8 @@ const _modules= [
   MatTableModule,
   MatSortModule,
   MatDialogModule,
-  CustomRegisterModule
+  CustomRegisterModule,
+  // MatFormFieldModule
 ]
 
 @NgModule({

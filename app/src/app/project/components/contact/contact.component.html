@@ -23,15 +23,19 @@
         </div>
         <div class="col-md-8"></div>
         <div class="col-md-4">
-            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" style="float: right;">
-                <mat-icon (click)="openDialog()">menu</mat-icon>
-              </button>
-            <!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->
-            <!-- <div class="card"> 
-                <mat-icon class="close-icon" color="warn">close</mat-icon>
-                <p>sample</p> <mat-icon>minimize</mat-icon>
+
+            <!-- <div class="card card-data card-hover-data">
+               
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                    style="float: right;">
+                    <mat-icon>menu</mat-icon>
+                    
+                </button>
+                <div class="card-header">
+                    <span>card hrader</span>
+                </div>
             </div> -->
-            <!-- <mat-icon (click)="openDialog()"> comment</mat-icon> -->
+
 
 
         </div>
@@ -116,6 +120,98 @@
                 </div>
             </footer>
         </div>
+
+        <!-- live chat box -->
+        <!-- <div class="show">
+            <div class="chat-button-toggle">
+                <span>
+                    <mat-icon> comment</mat-icon>
+                </span>
+                <span>
+                    <mat-icon>clear</mat-icon>
+                </span>
+            </div>
+            <div class="chat-box">
+                <mat-card>
+                    <mat-card-title class="chat-box-header">
+                        Live Chat
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content class="chat-body">
+                        <div class="chat-incomming">
+                            <span>hello</span>
+                        </div>
+                        <div class="chat-outgoing">
+                            hi
+                        </div>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <div class="chat-input">
+                        <mat-form-field appearance="outline" class="input-line">
+                            <mat-label>Outline form field</mat-label>
+                            <input matInput placeholder="Placeholder">
+                            
+                            <mat-icon class="send-icon">send</mat-icon>
+                            
+                        </mat-form-field>
+                      
+                    </div>
+                    <mat-card-actions>
+
+
+                    </mat-card-actions>
+                    
+
+
+                </mat-card>
+            </div>
+        </div> -->
+        <!-- ending live chat box -->
+
+
+        <!-- starting chatgpt code -->
+        <div class="show">
+            <!-- Chat Toggle Button -->
+            <button class="chat-button-toggle" (click)="toggleChat()">
+                <span *ngIf="!isChatVisible">
+                    <mat-icon>comment</mat-icon>
+                </span>
+                <span *ngIf="isChatVisible">
+                    <mat-icon>clear</mat-icon>
+                </span>
+            </button>
+        
+            <!-- Chat Box -->
+            <div class="chat-box" [class.visible]="isChatVisible">
+                <mat-card>
+                    <mat-card-title class="chat-box-header">
+                        Live Chat
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content class="chat-body">
+                        <div class="chat-incoming">
+                            <span>hello</span>
+                        </div>
+                        <div class="chat-outgoing">
+                            <span>hi</span>
+                        </div>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <div class="chat-input">
+                        <mat-form-field appearance="outline" class="input-line">
+                            <mat-label>Type a message</mat-label>
+                            <input matInput placeholder="Enter your message">
+                            <mat-icon class="send-icon">send</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+        
+        
+        
+
+        <!-- ending chatgpt code -->
 
     </div>
 
