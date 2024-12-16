@@ -13,7 +13,7 @@ export class SidebarComponent {
   appWorkSpaceRoutes: SidenavRoutes[] = appWorkSpaceRoutes;
   // checking toggle for sidenav
   expanded: boolean = true;
-  isShowing = false;
+  isShowing:boolean = false;
   // @ViewChild('sidenav') sidenav: MatSidenav;
 
   // additionally adding data
@@ -27,4 +27,7 @@ export class SidebarComponent {
   // navbarClose():void{
   //   this.sidbaropen ;{(this.sidbaropen=false)}
   // }
+  istoggle(){
+    this.isShowing = !this.isShowing
+  }
 }

@@ -19,7 +19,19 @@
                
             </div>
         </mat-nav-list>
-        <button (click)="expanded = !expanded" class="button"><mat-icon>reorder</mat-icon></button>
+        <!-- <button (click)="expanded = !expanded" class="button"><mat-icon>reorder</mat-icon></button> -->
+        <!-- Dynamically change the icons while clicking button -->
+        <button (click)="expanded = !expanded;" class="button">
+            <span *ngIf="expanded">
+                <mat-icon>reorder</mat-icon>
+            </span>
+            <span *ngIf="!expanded">
+                <mat-icon>clear</mat-icon>
+            </span>
+        </button>
+
+
+
        <!-- <div class="side-nav-collasp fast_forward">
             <button mat-icon-button (click)="navbarOpen()" *ngIf="(sidenaveState$ | async)?.sidbaropen">
                 <mat-icon>reorder</mat-icon>

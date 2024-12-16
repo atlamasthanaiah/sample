@@ -46,10 +46,11 @@ export const appWorkSpaceRoutes : SidenavRoutes [] = [
     },
     {
        
-        icon : 'course',
+        icon : 'home',
         route : RoutesPath.sideNav.base.path + '/' + RoutesPath.sideNav.CONTACT.path,
         // route : '${RoutesPath.sideNav.base.path}/${RoutesPath.sideNav.CONTACT.path}',
         title : 'CONTACT',  /// we can find this in en.json file (same name for language translation)
         type : 'link'
     }
+   
 ]
