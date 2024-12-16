@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RoutesPath } from './shared/const/routing/router-path.const';
 import { HomeComponent } from './home/home/home.component';
+import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 // import { LoginComponent } from './home/login/login.component';
 
 const routes: Routes = [
@@ -41,6 +43,12 @@ const routes: Routes = [
   {
     loadChildren: () => import('./project/project.module').then(m => m.ProjectModule),
     path: RoutesPath.sideNav.base.path
+  },
+  {
+    path:RoutesPath.WILDCARD, component:PageNotFoundComponent
+  },
+  {
+    path:RoutesPath.NOT_AUTHORIZED.BASE.path, component:AccessDeniedComponent
   }
 ];
 

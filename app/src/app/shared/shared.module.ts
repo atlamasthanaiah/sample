@@ -15,6 +15,8 @@ import { CustomRegisterModule } from './module/custom-registry.module';
 import { NavComponent } from './components/nav/nav.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 // import { AgGridModule } from 'ag-grid-angular';
 
@@ -47,7 +49,7 @@ const component = [
 // ]
 
 @NgModule({
-  declarations: [ ...component ],
+  declarations: [ ...component, AccessDeniedComponent, PageNotFoundComponent ],
   exports : [ ...module, ...component],
   imports: [ ...module ],
 //   providers : [...services ]

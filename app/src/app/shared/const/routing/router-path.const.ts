@@ -29,7 +29,9 @@ export class RoutesPath {
     static NOT_AUTHORIZED = {
         BASE : {
             label : 'Not Authorized',
-            path : 'not-authorized'
+            path : 'access-denied'
+
+            // path : 'not-authorized'
         }
     };
     
