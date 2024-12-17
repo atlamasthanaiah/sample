@@ -13,7 +13,7 @@ import { DateService } from '../shared/service/date.service';
   declarations: [
     N2estimationComponent,
     N3estimationComponent,
-    DatefieldComponent
+    DatefieldComponent,
   ],
 
   imports: [

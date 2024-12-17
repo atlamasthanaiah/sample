@@ -5,7 +5,7 @@ import { N3estimationComponent } from './n3estimation/n3estimation.component';
 
 const estimationRoutes: Routes = [
   { path: 'n2estimation', component: N2estimationComponent },
-  { path: 'n3estmation', component: N3estimationComponent }
+  { path: 'n3estmation', component: N3estimationComponent },
 ];
 
 @NgModule({

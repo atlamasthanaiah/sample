@@ -32,6 +32,9 @@ export class RoutesPath {
             path : 'access-denied'
 
             // path : 'not-authorized'
+        },
+        Access_Denied: {
+            path:'access-denied'
         }
     };
     

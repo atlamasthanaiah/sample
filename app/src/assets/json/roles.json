@@ -1,6 +1,26 @@
-[
-    { "name": "admin"},
-    { "name": "creator"},
-    { "name": "fundamental"},
-    { "name": "user"}
-]
+{
+    "roles": {
+        "admin": [
+            "viewDashboard",
+            "editUsers"
+        ],
+        "user": [
+            "viewProfile"
+        ],
+        "guest": []
+    },
+    "users": [
+        {
+            "username": "john_admin",
+            "role": "admin"
+        },
+        {
+            "username": "jane_user",
+            "role": "user"
+        },
+        {
+            "username": "guest_user",
+            "role": "guest"
+        }
+    ]
+}

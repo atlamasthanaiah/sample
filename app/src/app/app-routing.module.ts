@@ -4,6 +4,7 @@ import { RoutesPath } from './shared/const/routing/router-path.const';
 import { HomeComponent } from './home/home/home.component';
 import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { RoleGuard } from './estimation/services/role.guard';
 // import { LoginComponent } from './home/login/login.component';
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
 
   {
     loadChildren: () => import('./estimation/estimation.module').then(m=>m.EstimationModule),
-    path:RoutesPath.estimation.base.path
+    path:RoutesPath.estimation.base.path,
+    canLoad: [RoleGuard],
+    data: { roles: ['admin'] },
   },
 
   {
@@ -45,11 +48,11 @@ const routes: Routes = [
     path: RoutesPath.sideNav.base.path
   },
   {
-    path:RoutesPath.WILDCARD, component:PageNotFoundComponent
+    path:RoutesPath.NOT_AUTHORIZED.Access_Denied.path, component:AccessDeniedComponent
   },
   {
-    path:RoutesPath.NOT_AUTHORIZED.BASE.path, component:AccessDeniedComponent
-  }
+    path:RoutesPath.WILDCARD, component:PageNotFoundComponent
+  },
 ];
 
 @NgModule({
