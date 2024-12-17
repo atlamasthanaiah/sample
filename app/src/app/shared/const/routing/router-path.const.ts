@@ -2,6 +2,15 @@ export class RoutesPath {
     static Home = {
         base:{
             path: 'Home'
+        },
+        // home:{
+        //     path: 'home'
+        // },
+        signin:{
+            path: 'signin'
+        },
+        login:{
+            path: 'login'
         }
     };
     static PATHMATCH = 'full';
@@ -20,7 +29,12 @@ export class RoutesPath {
     static NOT_AUTHORIZED = {
         BASE : {
             label : 'Not Authorized',
-            path : 'not-authorized'
+            path : 'access-denied'
+
+            // path : 'not-authorized'
+        },
+        Access_Denied: {
+            path:'access-denied'
         }
     };
     
@@ -40,7 +54,7 @@ export class RoutesPath {
         },
         
         CONTACT : {
-            path : 'conact'
+            path : 'contact'
         },
         CREATE_PROJECT: {
             path : 'create-project',
@@ -60,8 +74,8 @@ export class RoutesPath {
             path : 'student'
         },
 
-        student : {
-            path : 'student'
+        stdregistration : {
+            path : 'stdregistration'
         },
 
         meditation : {
@@ -72,11 +86,15 @@ export class RoutesPath {
     static employee = {
 
         base : {
-            path : 'gridTable'
+            path : 'employee'
         },
 
-        employee : {
-            path : 'employee'
+        emptable : {
+            path : 'emptable'
+        },
+
+        addemployee : {
+            path : 'addemployee'
         },
 
         meditation : {
@@ -90,11 +108,11 @@ export class RoutesPath {
             path : 'estimation'
         },
 
-        virtualscroll : {
-            path: 'virtualscroll'
+        n2estimation : {
+            path: 'n2estimation'
         },
-        infinity_scroll:{
-            path : 'infinityscroll'
+        n3estimation:{
+            path : 'n3estimation'
         },
         result : {
             path : 'result'
@@ -102,7 +120,7 @@ export class RoutesPath {
        
     }
 
-    static TraingDetails = {
+    static traingDetails = {
 
         base : {
             path : 'training'
@@ -111,7 +129,7 @@ export class RoutesPath {
         liveproject : {
             path : 'liveproject'
         },
-        intership : {
+        internship : {
             path : 'internship'
         },
         meditation : {

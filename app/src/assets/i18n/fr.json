@@ -7,11 +7,23 @@
     "BASIC_HOME" : "Maison",
 
     "LOGIN":{
+        "LOGIN_SCREEN" : "Écran de connexion",
         "USR_NAME": "nom d'utilisateur",
         "PASSWORD" : "mot de passe",
-        "LOGIN" : "Connexion",
-        "LOG_OUT" : "Se déconnecter"
+        "LOG_IN" : "Connexion",
+        "LOG_OUT" : "Se déconnecter",
+        "SIGNIN" : "Se connecter"
     },
+
+    "SIGNIN" : {
+        "SIGNUP_SCEEN" : "Écran d'inscription",
+        "ENTER_NAME" : "Entrez le nom",
+        "ENTER_EMAIL" : "Entrez l'e-mail",
+        "ENTER_USERNAME" : "Saisissez votre nom d'utilisateur",
+        "ENTER_PASSWORD" : "Entrer le mot de passe",
+        "ENTER_PHONE" : "Entrez le téléphone"
+    },
+    
     "HOME":{
         "HOME" : "Maison",
         "HELP" : "Aider",
@@ -114,5 +126,22 @@
         "COURSE_START_DATE" : "Date de début du cours",
         "COURSE_END_DATE" : "Date de fin du cours",
         "TIME" : "Temps"
+    },
+
+    "DATES" :{
+        "START_DATE" : "Date de début",
+        "END_DATE" : "Date de fin",
+        "Date_Of-Birth" : "Date de naissance",
+        "CF" : "FC",
+        "MF" : "MF",
+        "MA" : "maman",
+        "DATE-FIELD-8" : "Champ de date8",
+        "DATE-FIELD-9" : "Champ de date9",
+        "DATE-FIELD-10" : "Champ de date10",
+        "DATE-FIELD-11" : "Champ de date11",
+        "DATE-FIELD-12" : "Champ de date12",
+        "DATE-FIELD-13" : "Champ de date13",
+        "DATE-FIELD-19" : "Champ de date14"
+
     }
 }

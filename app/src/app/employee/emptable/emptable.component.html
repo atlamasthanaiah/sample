@@ -1,0 +1,26 @@
+<!-- <p>emptable works!</p> -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Salary</td>
+            <td>Exp</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+   <tbody>
+    <tr *ngFor="let x of data">
+        <td> {{x.id}} </td>
+        <td> {{x.gender | emp}} {{x.name }} </td> 
+        <td> {{x.salary}} </td>
+        <td> {{x.exp}} </td> 
+        <td>  <mat-icon>edit</mat-icon> &nbsp; &nbsp;<mat-icon>delete</mat-icon> </td>
+        <!-- <td>  </td> -->
+    </tr>
+    <!-- <a routerLink="/employee/addemployee">Add Employee</a> -->
+   </tbody>
+   <button mat-raised-button color="primary" (click)="navigations('/employee/addemployee')">Add</button>
+   <!-- <button (click)="navigations('/employee/addemployee')">Add Employee</button> -->
+</table>

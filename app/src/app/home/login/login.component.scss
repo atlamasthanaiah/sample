@@ -1,0 +1,42 @@
+.example-card {
+    width: 100%; /* Adjust card width */
+    max-width: 500px; 
+    border-radius: 11px;
+    border: solid 2px gainsboro;
+    // margin: auto;
+    align-items: center;
+    text-align: center;
+    background-image: url(../../../assets/images/beach.jpg);
+    // background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);/assets\images\beach.jpg
+    // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    // background-image: linear-gradient(to right, black 0%,whitesmoke, rgb(128, 98, 0),orange, whitesmoke 100%);
+    // background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%);
+}
+
+// .example-card:hover{
+//     box-shadow: 1px 1px 1px 1px orange;
+//     transform:scale(1.0);
+// }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.mat-form-field {
+  width: 100%;
+}
+
+.forget-pass{
+    float: right;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.back-img{
+    background-image: url(../../../assets/images/beach.jpg);
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    height:100%;
+}

@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center"> <!-- Center horizontally and vertically -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4 col-sm-2 col-lg-3"></div>
+            <div class="col-md-4 col-sm-8 col-lg-6">
+                <div class="d-flex justify-content-center align-items-center">
+                    <mat-card class="example-card">
+                        <mat-card-title>Login Screen</mat-card-title>
+                        <mat-card-content >
+                            <mat-form-field appearance="outline">
+                                <mat-label>Enter UserName</mat-label>
+                                <input matInput placeholder="Enter UserName">
+                                <mat-icon matSuffix>account_circle</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Enter Password</mat-label>
+                                <input matInput placeholder="Enter Password" [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                            <a class="forget-pass" routerLink="/Home/forgotpassword">ForgrtPassword</a>
+                        </mat-card-content>
+                        <mat-divider></mat-divider>
+                        <mat-card-actions class="d-flex justify-content-center align-items-center">
+                            <button mat-button color="primary">Login</button>
+                            <button mat-button color="primary" (click)="navigations('/Home/signin')">SignUp</button>
+                            <!-- <button mat-button color="primary" (click)="navigateToSignIn()">SignUp</button> -->
+                        </mat-card-actions>
+                        <mat-divider></mat-divider>
+                        <mat-card-footer>
+                            <p>youtube</p>
+                        </mat-card-footer>
+                    </mat-card>
+                </div>
+                
+            </div>
+            <div class="col-md-4 col-sm-2 col-lg-3"></div>
+            </div>
+        </div>
+        
+    </div>
+</div>

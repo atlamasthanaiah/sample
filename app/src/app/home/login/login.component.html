@@ -1,0 +1,44 @@
+<div class="container-fluid  back-img h-100">
+    <div fxLayout="row" fxLayoutAlign="space-between center"> <!-- Center horizontally and vertically -->
+        <div class="d-flex justify-content-center align-items-center">
+            <mat-card class="example-card mt-5 bt-5" flex="25">
+                <mat-card-title>Login Screen</mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="loginForm">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter UserName</mat-label>
+                            <input matInput placeholder="Enter UserName" formControlName="userName">
+                            <mat-icon matSuffix>account_box</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Password</mat-label>
+                            <input matInput placeholder="Enter Password" [type]="hide ? 'password' : 'text'"
+                                formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <div>
+                            <a class="forget-pass" routerLink="/Home/forgotpassword">ForgrtPassword</a><br>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;&nbsp;
+                            <button mat-raised-button color="primary"
+                                (click)="navigations('/Home/signin')">SignUp</button>
+
+                        </div>
+                    </form>
+                </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-actions>
+                    <!-- <button mat-button color="primary" (click)="navigateToSignIn()">SignUp</button> -->
+                </mat-card-actions>
+                <mat-divider></mat-divider>
+                <mat-card-footer>
+                    <p>youtube</p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+</div>

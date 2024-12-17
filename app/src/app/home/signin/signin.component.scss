@@ -1,0 +1,43 @@
+.example-card {
+    width: 100%; /* Adjust card width */
+    max-width: 500px; 
+    border-radius: 11px;
+    border: solid 2px hwb(304 0% 89% / 0.322);
+    // margin: auto;
+    // margin-left: 50vh;
+    align-items: center;
+    text-align: center;
+    // background-image: ;
+    // background-image: url(../../../assets/images/beach.jpg);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    // background-image: url(../../../assets/images/mountain.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // overflow-x:var(#f83600);
+    // background-image: linear-gradient(to right, black 0%,whitesmoke, rgb(128, 98, 0),orange, whitesmoke 100%);
+    // background-image: linear-gradient(to top, #5067cc 0%, #f1f500da 100%);
+}
+
+.back-img{
+    background-image: url(../../../assets/images/mountain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    height:100vh;
+}
+
+.example-card:hover{
+    // border: 1px solid #3E7DC0 !important;
+    box-shadow: 21px orange;
+    // transform:scale(1.2);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.mat-form-field {
+  width: 80%;
+}
+

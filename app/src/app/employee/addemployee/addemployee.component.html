@@ -1,0 +1,39 @@
+<div style="text-align: center;">
+    <h4>Adding Empoyee Details</h4>
+    <form >
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Id</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="formData.id" name="id">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Name</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="formData.name" name="name">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Gender</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="formData.gender" name="gender">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Salary</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="formData.salary" name="salary">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Exp</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="formData.exp" name="exp">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)=" createForm()">Save</button> &nbsp;&nbsp;
+            <button mat-raised-button color="primary" routerLink="/employee/emptable">Back</button>
+        </div>
+    </form>
+</div>

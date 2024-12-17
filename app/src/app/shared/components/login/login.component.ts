@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'atla-login',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public hide = true;
+  constructor(private _route:Router) { }
 
   ngOnInit(): void {
   }
 
+  navigations( link : string){
+    this._route.navigate([link])
+  }
+
+  // navigateToSignIn() {
+  //   this._route.navigate(['/signin']);
+  // }
 }

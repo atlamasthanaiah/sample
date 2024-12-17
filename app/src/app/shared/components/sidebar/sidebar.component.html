@@ -1,0 +1,72 @@
+<!-- <mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="expanded = !expanded"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">Nested Menus</h1>
+</mat-toolbar> -->
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+        <mat-nav-list >
+            <div class="primary-nav" *ngFor="let nav of appWorkSpaceRoutes">
+                <div>
+                    <a *ngIf="nav?.type === 'link' || nav.type === 'menu'" mat-list-item [routerLink]="[nav?.route]" routerLinkActivate="active">
+                        <mat-icon >{{nav.icon}}</mat-icon>
+                        <span class="full-width" *ngIf="expanded || isShowing">{{ (nav.title) | translate }}</span>
+                        <!-- <span class="full-width"  *ngIf="expanded || isShowing">{{nav.title | translate}}</span> -->
+                        <!-- <span class="full-width"  *ngIf="(sidenaveState$ | async)?.sidbaropen">{{nav.title | translate}}</span> -->
+                        
+                    </a>
+                    <mat-divider></mat-divider>
+                </div>
+               
+            </div>
+        </mat-nav-list>
+        <!-- <button (click)="expanded = !expanded" class="button"><mat-icon>reorder</mat-icon></button> -->
+        <!-- Dynamically change the icons while clicking button -->
+        <button (click)="expanded = !expanded;" class="button">
+            <span *ngIf="expanded">
+                <mat-icon>reorder</mat-icon>
+            </span>
+            <span *ngIf="!expanded">
+                <mat-icon>clear</mat-icon>
+            </span>
+        </button>
+
+
+
+       <!-- <div class="side-nav-collasp fast_forward">
+            <button mat-icon-button (click)="navbarOpen()" *ngIf="(sidenaveState$ | async)?.sidbaropen">
+                <mat-icon>reorder</mat-icon>
+            </button>
+            <button mat-icon-button (click)="navbarClose()" *ngIf="(sidenaveState$ | async)?.sidbaropen">
+                <mat-icon>fast_rewind</mat-icon>
+            </button> 
+       </div>-->
+       
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <div class="app-cotainer">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- below code origial  -->
+<!-- <mat-sidenav-container >
+    <mat-sidenav mode="side" opened  *ngIf="expanded">
+        <mat-nav-list>
+            <div class="primary-nav" *ngFor="let nav of appWorkSpaceRoutes">
+                <a *ngIf="nav?.type === 'link' || nav.type === 'menu'" mat-list-item [routerLink]="[nav?.route]" routerLinkActivate="active">
+                    <mat-icon>{{nav.icon}}</mat-icon>
+                    <span>{{nav.title}}</span>
+                </a>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-nav-list>
+        <button (click)="expanded = !expanded">Click me</button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="expanded = !expanded">Click me</button>
+        <div class="app-cotainer">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
