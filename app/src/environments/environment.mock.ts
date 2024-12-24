@@ -4,7 +4,7 @@ export const environment:Environment = {
     production : false,
     api: '/api',
     auth: '',
-    envName: 'prod',
+    envName: 'MOCK',
     version: require('../../package.json')?.version,
     matomoSiteID : 2,
     matomoSiteURL :'',

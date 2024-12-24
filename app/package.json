@@ -3,10 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start": "ng serve --configuration=development",
+    "start:moc": "ng serve --configuration=mock",
+    "start:prod": "ng serve --configuration=production",
+    "start:re7": "ng serve --configuration=re7",
+    "build": "ng build --configuration=development",
+    "build:prod": "ng build --configuration=production",
+    "build:re7": "ng build -configuration=re7",
+    "build:moc": "ng build -configuration=mock"
   },
   "private": true,
   "dependencies": {
