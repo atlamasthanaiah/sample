@@ -1,6 +1,6 @@
 import { Environment } from './environment.model';
 
-export const envoronment:Environment = {
+export const environment:Environment = {
     production : false,
     api : '/api',
     auth : '',
@@ -8,8 +8,9 @@ export const envoronment:Environment = {
     version : require('../../package.json')?.version,
     matomoSiteID : 2,
     matomoSiteURL : '',
-    MAIN_API_URL : '',
+    MAIN_API_URL : 'http://atla-api.re7.applis.atlainstitute.fr',
     API_CONST : {
         'ALL-PROJECT' : 'project/project-details'    //api url details
     }
 }
+
