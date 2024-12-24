@@ -59,6 +59,14 @@
                 }
               ]
             },
+            "oper":{
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.oper.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,8 +77,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -99,6 +107,12 @@
             },
             "development": {
               "browserTarget": "app:build:development"
+            },
+            "re7": {
+              "browserTarget": "app:build:re7"
+            },
+            "oper": {
+              "browserTarget": "app:build:oper"
             }
           },
           "defaultConfiguration": "development"

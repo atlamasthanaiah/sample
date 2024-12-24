@@ -8,7 +8,7 @@ export const environment:Environment = {
     version: require('../../package.json')?.version,
     matomoSiteID : 2,
     matomoSiteURL :'',
-    MAIN_API_URL: 'http://atla-api.dev1.applis.atlainstitute.fr',
+    MAIN_API_URL: 'http://atla-api.mock.applis.atlainstitute.fr',
     API_CONST : {
         'ALL-PROJECT' : 'project/project-details'    //api url details
     }
