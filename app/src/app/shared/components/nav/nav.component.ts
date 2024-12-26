@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'atla-nav',
@@ -8,7 +9,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavComponent implements OnInit {
 
-  public envName: string | undefined;
+  // public envName: string | undefined;
+  public environmentName:string | undefined= environment.envName;
+
 
   constructor(
     public translate: TranslateService
@@ -18,6 +21,8 @@ export class NavComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    console.log("environment name",environment.envName)
+    console.log("environment api url",environment.MAIN_API_URL)
   }
   switchLang(lang: string) {
     this.translate.use(lang);
