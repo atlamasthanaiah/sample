@@ -1,55 +1,86 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
-            <mat-toolbar style="background-color: rgb(85, 107, 47);">
-                <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                  <mat-icon>menu</mat-icon>
-                </button> -->
-                <!-- <span>My App</span> -->
-                <!-- <span class="example-spacer"></span> -->
-                <div style="float: right;">
-                    <button mat-icon-button class="example-icon favorite-icon"
-                        aria-label="Example icon-button with heart icon">
-                        <mat-icon>favorite</mat-icon>
-                    </button>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                        <mat-icon>share</mat-icon>
-                    </button>
-                </div>
-            </mat-toolbar>
-            <header>
-                <h3>Chart box</h3>
-            </header>
-        </div>
-        <div class="col-md-8"></div>
-        <div class="col-md-4">    
+        
+        <!-- <div class="col-md-12">
+            <mat-card>
+                <img src="../../../../assets/images/contactus.jpg" alt="contactus" class="contact-img">
+
+            </mat-card>
+
+        </div> -->
+        <div class="row">
+            <div class="col-lg-8">
+                <img src="../../../../assets/images/contactus.jpg" alt="contactus" class="contactUs-img">
+            </div>
+            <div class="col-lg-4">
+                <p>for more information please connect us</p>
+                <p>We are also provide some special officers.</p>
+            </div>
+            <!-- <div class="col-lg-6">
+                <mat-card class="contact-img">
+                    <mat-card-title>Contact Us</mat-card-title>
+                    <mat-card-content>
+                        <form style="text-align: center;">
+                            <div>
+                                <mat-label>Enter Name</mat-label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput placeholder="Enter UserName">
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <mat-label>Enter Email</mat-label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput placeholder="Enter email">
+                                </mat-form-field>
+
+                            </div>
+                            <div>
+                                <mat-label>Enter Phone</mat-label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput placeholder="Enter Phone">
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <mat-label>Enter Message</mat-label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput placeholder="Enter Message">
+                                </mat-form-field>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions>
+                        <button mat-button color="primary">Save</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div> -->
         </div>
         <div class="col-md-12">
             <footer class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h2>Atla Institute</h2>
+                            <h2>{{'CONTACTUS.ATLA-INSTITUTE' | translate}}</h2>
+                            <!-- <h2>Atla Institute</h2> -->
                         </div>
                         <div class="col-md-3">
-                            <h5>About Us</h5>
+                            <h5>{{'CONTACTUS.ABOUT-US' | translate}}</h5>
                             <p>
-                                Atla institute is a leading platform that provides
-                                computer science resources and coding challenges for
-                                programmers and technology enthusiasts along with
-                                interview and exam preparations for upcoming aspirants.
+                                {{'CONTACTUS.STATEMENTS' | translate}}
                             </p>
                         </div>
                         <div class="col-md-3">
-                            <h5>Contact Us</h5>
+                            <h5>{{'CONTACTUS.CONTACT-US' | translate}}</h5> 
                             <ul class="list-unstyled">
-                                <li>Email: atla@example.com</li>
-                                <li>Phone: 91+ 8187876863</li>
-                                <li>Address: Peddagovindapalli, kothapatnam, nellore, india</li>
+                                <li>{{'STUDENT.EMAIL' | translate}}: atla@example.com</li>
+                                <li>{{'STUDENT.PHONE' | translate}}: 91+ 8187876863</li>
+                                <li>{{'STUDENT.ADDRESS' | translate}}: Peddagovindapalli, kothapatnam, nellore, india</li>
                             </ul>
                         </div>
                         <div class="col-md-3">
-                            <h5>Follow Us</h5>
+                            <h5>{{'CONTACTUS.SOCIA-LINKS' | translate}}</h5>
                             <ul class="list-inline footer-links">
                                 <li class="list-inline-item">
                                     <a href="#">

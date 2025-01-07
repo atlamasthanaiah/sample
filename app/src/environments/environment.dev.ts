@@ -11,7 +11,11 @@ export const environment: Environment = {
     matomoSiteURL : '',
     MAIN_API_URL : 'http:localhost:8080/v1',
     API_CONST : {
-        'ALL-PROJECT' : 'project/project-details'    //api url details
+        'ALL-PROJECT' : 'project/project-details' ,   //api url details
         // have to add all api details
+        'DMM-OFFER'   :  'project/dmm-offerdetails',
+        'CREATE-PROJECT' : 'project/create-project',
+        'STUDENT-LIST' : 'student/student-list',
+        'EMPLOYEE-DETAILS' : 'estimation/employee-details'
     }
 };
