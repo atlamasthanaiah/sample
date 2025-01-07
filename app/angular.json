@@ -111,8 +111,8 @@
             "re7": {
               "browserTarget": "app:build:re7"
             },
-            "oper": {
-              "browserTarget": "app:build:oper"
+            "mock": {
+              "browserTarget": "app:build:mock"
             }
           },
           "defaultConfiguration": "development"

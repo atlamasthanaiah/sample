@@ -58,6 +58,7 @@
         "FIRST_NAME" : "Prénom",
         "LAST_NAME" : "Nom de famille",
         "EMAIL" : "E-mail",
+        "ADDRESS" : "Address",
         "PHONE" : "Téléphone",
         "COUNTRY" : "Pays",
         "MUNICIPLITY" : "Municipalité",
@@ -143,5 +144,12 @@
         "DATE-FIELD-13" : "Champ de date13",
         "DATE-FIELD-19" : "Champ de date14"
 
+    },
+    "CONTACTUS": {
+        "ATLA-INSTITUTE" : "Institut de l'Atlas",
+        "ABOUT-US" : "À propos de nous",
+        "CONTACT-US" : "Contactez-nous",
+        "SOCIA-LINKS" : "Liens sociaux",
+        "STATEMENTS" : "L'institut Atla est une plate-forme de premier plan qui fournit des ressources informatiques et des défis de codage aux programmeurs et aux passionnés de technologie, ainsi que des préparations aux entretiens et aux examens pour les futurs aspirants."
     }
 }
