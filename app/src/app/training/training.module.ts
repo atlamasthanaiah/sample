@@ -4,17 +4,20 @@ import { MeditationComponent } from './meditation/meditation.component';
 import { InternshipComponent } from './internship/internship.component';
 import { TrainingRoutingModule } from './training-routing.module';
 import { SharedModule } from '../shared/shared.module';
-
+import { TrainerDetailsComponent } from './trainer-details/trainer-details.component';
+import { MatTableModule } from '@angular/material/table' 
 
 @NgModule({
   declarations: [
     MeditationComponent,
-    InternshipComponent
+    InternshipComponent,
+    TrainerDetailsComponent
   ],
   imports: [
     CommonModule,
     TrainingRoutingModule,
-    SharedModule
+    SharedModule,
+    MatTableModule
   ]
 })
 export class TrainingModule { }

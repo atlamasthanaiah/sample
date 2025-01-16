@@ -1,10 +1,10 @@
 [
     { "name": "John Doe", "phone": "99183726459", "qualificaation":"Btecc","experience":7,"salary": 50000 },
-    { "name": "Jane Smith", "phone": "9874563214","qualificaation":"Msc","experience":7, "salary": 60000 },
-    { "name": "Alice Johnson", "phone": "9632587412", "qualificaation":"Btecc","experience":7,"salary": 55000 },
-    { "name": "Pallavi", "phone": "9347062714", "qualificaation":"Bca","experience":7,"salary": 8000 },
-    { "name": "Samba", "phone": "9884587632", "qualificaation":"Phd","experience":7,"salary": 20000 },
-    { "name": "JB", "phone": "9884404524", "qualificaation":"Mtech","experience":7,"salary": 44000 },
-    { "name": "Atla", "phone": "8187876863", "qualificaation":"Mca","experience":7,"salary": 35000 }
+    { "name": "Jane Smith", "phone": "9874563214","qualificaation":"Msc","experience":5, "salary": 60000 },
+    { "name": "Alice Johnson", "phone": "9632587412", "qualificaation":"Btecc","experience":2,"salary": 55000 },
+    { "name": "Pallavi", "phone": "9347062714", "qualificaation":"Bca","experience":9,"salary": 8000 },
+    { "name": "Samba", "phone": "9884587632", "qualificaation":"Phd","experience":4,"salary": 20000 },
+    { "name": "JB", "phone": "9884404524", "qualificaation":"Mtech","experience":10,"salary": 44000 },
+    { "name": "Atla", "phone": "8187876863", "qualificaation":"Mca","experience":11,"salary": 35000 }
 ]
   
