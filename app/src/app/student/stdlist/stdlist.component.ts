@@ -18,6 +18,7 @@ export class StdlistComponent implements OnInit {
 
   displayedColumns : string[]= ['FirstName','LastName','Email','Phone','Country','Action']
   isLoading = false;
+  
   // pagination
   dataSource : MatTableDataSource<Student>;
   @ViewChild( MatPaginator ) paginator: MatPaginator;
@@ -34,10 +35,11 @@ export class StdlistComponent implements OnInit {
 
   ngOnInit(): void {
     this.SList.getSList().subscribe({
-      next:((response:Student) =>{
-        this.dataSource = response.studentList
+      next:((response:Student[]) =>{
+        // this.dataSource = response.studentList
+        this.dataSource = new MatTableDataSource(response);
         // below code for pagination in angullar material
-        this.dataSource = new MatTableDataSource(response.studentList)
+        // this.dataSource = new MatTableDataSource(response.studentList)
         this.dataSource.paginator = this.paginator;
         // spinner
         this.isLoading = false;

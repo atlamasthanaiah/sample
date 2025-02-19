@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-    <path fill="none" d="M0 0h24v24H0z"/>
-    <path d="M20 10.18V19H4V5h9.03A5.995 5.995 0 0 1 17 11c0 1.03-.26 2.03-.74 2.89L15 13.17V12l3-2-3-2v1.17L16.27 9H13c-1.1 0-2 .9-2 2s.9 2 2 2h5v2.18l2 1.2z"/>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Book shape -->
+    <rect x="30" y="40" width="140" height="100" fill="#FFD700" stroke="#000" stroke-width="2"/>
+    <line x1="30" y1="90" x2="170" y2="90" stroke="#000" stroke-width="2"/>
+    <!-- Graduation cap -->
+    <polygon points="100,20 50,50 150,50" fill="#000"/>
+    <rect x="90" y="50" width="20" height="30" fill="#000"/>
+    <circle cx="100" cy="85" r="5" fill="#FFD700"/>
 </svg>
-<!-- <mat-icon>alarm</mat-icon> -->
