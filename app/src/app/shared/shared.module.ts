@@ -17,6 +17,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ReusableDataTableComponent } from './components/reusable-data-table/reusable-data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+// import { EmpPipe } from '../employee/emp.pipe';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 // import { AgGridModule } from 'ag-grid-angular';
 
@@ -32,6 +37,9 @@ const module = [
   MatSnackBarModule,
   MatSortModule,
   MatProgressSpinnerModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatInputModule,
   CustomRegisterModule
 ]
 
@@ -40,7 +48,11 @@ const component = [
  LoginComponent,
  NavComponent,
  SidebarComponent,
- SpinnerComponent
+ SpinnerComponent,
+ AccessDeniedComponent,
+ PageNotFoundComponent,
+ ReusableDataTableComponent,
+//  EmpPipe
 ]
 
 // const services = [
@@ -49,7 +61,7 @@ const component = [
 // ]
 
 @NgModule({
-  declarations: [ ...component, AccessDeniedComponent, PageNotFoundComponent ],
+  declarations: [ ...component ],
   exports : [ ...module, ...component],
   imports: [ ...module ],
 //   providers : [...services ]

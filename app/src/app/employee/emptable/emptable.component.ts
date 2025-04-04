@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../services/employee.service';
 import { Employee } from '../../employee/model/employeeData.model';
-import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'atla-emptable',
@@ -10,17 +10,19 @@ import { Router } from '@angular/router';
 })
 export class EmptableComponent implements OnInit {
 
-  constructor( private empservice : EmployeeService, private router: Router) { }
- 
-  data: Employee[] = [];
+  displayedColumns_parent: string[] = ['id', 'name', 'gender', 'exp', 'salary'];
+  dataSource_parent = new MatTableDataSource<Employee>();
+
+  constructor(private empservice: EmployeeService) {}
 
   ngOnInit(): void {
-    this.empservice.getAalldata().subscribe( res=>
-      this.data = res.employee
-    )
-  }
-
-  navigations( link : string ){
-    this.router.navigate([link])
+    this.empservice.getAalldata().subscribe({
+      next: (res) => {
+        this.dataSource_parent.data = res.employee; // Ensure this returns an array
+      },
+      error: (err) => {
+        console.error('Failed to load employee data', err);
+      }
+    });
   }
 }
