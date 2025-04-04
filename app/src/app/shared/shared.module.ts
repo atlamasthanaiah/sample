@@ -21,7 +21,9 @@ import { ReusableDataTableComponent } from './components/reusable-data-table/reu
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
-// import { EmpPipe } from '../employee/emp.pipe';
+import { MatIconModule } from '@angular/material/icon';
+
+//  import { EmpPipe } from '../employee/emp.pipe';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 // import { AgGridModule } from 'ag-grid-angular';
 
@@ -40,6 +42,7 @@ const module = [
   MatTableModule,
   MatPaginatorModule,
   MatInputModule,
+  MatIconModule,
   CustomRegisterModule
 ]
 

@@ -1,4 +1,16 @@
-<atla-reusable-data-table 
-  [displayedColumns]="displayedColumns_parent" 
-  [dataSource]="dataSource_parent">
-</atla-reusable-data-table>
+<atla-reusable-data-table [dataSource]="dataSource_parent" [displayedColumns]="displayedColumns_parent" >
+  
+    <!-- 👇 Custom action template only used here -->
+    <ng-template #actionTemplate let-element>
+      <button mat-icon-button color="primary" >
+        <mat-icon>edit</mat-icon>
+        <!-- (click)="onEdit(element)" -->
+      </button>
+      <button mat-icon-button color="warn" >
+        <mat-icon>delete</mat-icon>
+        <!-- (click)="onDelete(element)" -->
+      </button>
+    </ng-template>
+  
+  </atla-reusable-data-table>
+  
