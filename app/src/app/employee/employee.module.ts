@@ -5,12 +5,12 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { MatIconModule } from '@angular/material/icon';
-import { EmpPipe } from './emp.pipe';
+// import { EmpPipe } from './emp.pipe';
 
 const components = [
   EmptableComponent,
   AddemployeeComponent,
-  EmpPipe
+  // EmpPipe
 ]
 
 const imports = [

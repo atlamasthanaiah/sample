@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../services/employee.service';
 import { Employee } from '../../employee/model/employeeData.model';
-import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'atla-emptable',
@@ -10,17 +10,31 @@ import { Router } from '@angular/router';
 })
 export class EmptableComponent implements OnInit {
 
-  constructor( private empservice : EmployeeService, private router: Router) { }
- 
-  data: Employee[] = [];
+  displayedColumns_parent: string[] = ['id', 'name', 'gender', 'exp', 'salary','actions'];
+  dataSource_parent = new MatTableDataSource<Employee>();
+
+  constructor(private empservice: EmployeeService) {}
 
   ngOnInit(): void {
-    this.empservice.getAalldata().subscribe( res=>
-      this.data = res.employee
-    )
+    this.empservice.getAalldata().subscribe({
+      next: (res) => {
+        this.dataSource_parent.data = res.employee; // Ensure this returns an array
+      },
+      error: (err) => {
+        console.error('Failed to load employee data', err);
+      }
+    });
   }
 
-  navigations( link : string ){
-    this.router.navigate([link])
-  }
+  // onEdit(emp: Employee) {
+  //   this.router.navigate(['/employee/edit', emp.id]);
+  // }
+  
+  // onDelete(emp: Employee) {
+  //   if (confirm(`Delete ${emp.Name}?`)) {
+  //     this.empservice.deleteEmployee(emp.id).subscribe(() => {
+  //       this.dataSource.data = this.dataSource.data.filter(e => e.id !== emp.id);
+  //     });
+  //   }
+  // }
 }

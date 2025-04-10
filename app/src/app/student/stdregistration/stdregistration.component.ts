@@ -3,13 +3,16 @@ import { FormBuilder, FormArray, FormGroup, FormControl, Validators, MaxLengthVa
 import { Router } from '@angular/router';
 import { NonmagicNumber, Roles } from 'src/app/shared/const/global/app.const';
 import { NotificationService } from 'src/app/shared/service/notification.service';
+import { CanComponentDeactivate } from '../../shared/service/prevent-data-loosing.guard'
+// import { Observable } from 'rxjs';
+// import { PreventDataLoosingGuard } from '../../shared/service/prevent-data-loosing.guard' 
 
 @Component({
   selector: 'atla-stdregistration',
   templateUrl: './stdregistration.component.html',
   styleUrls: ['./stdregistration.component.scss']
 })
-export class StdregistrationComponent implements OnInit {
+export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
 
   public studentForm: FormGroup;
   public formSubmitted = false;
@@ -20,6 +23,7 @@ export class StdregistrationComponent implements OnInit {
   public charactutePattern = /^[A-Za-z]+$/;
 
   constructor(private _fb: FormBuilder, private route: Router, private _sankebar: NotificationService) { }
+  // canDeactivate: () => boolean | Observable<boolean>;
 
   ngOnInit() {
     this.saveStudentForm();
@@ -96,5 +100,14 @@ export class StdregistrationComponent implements OnInit {
     console.log("getting reg form data",this.studentForm.value)
     //output
     //getting reg form data {firstName: 'atla', lastName: 'masthanaiah', gender: null, email: '', phone: '', …}block: ""city: nullcountry: ""email: ""firstName: "atla"gender: nulllastName: "masthanaiah"locality: ""municipality: ""phone: ""pincode: ""ruralorurban: nullstreet: ""village: ""ward: ""[[Prototype]]: Object           
+  }
+
+  /* to prevent the data loosing  */
+  canDeactivate(): boolean {
+    if (this.studentForm.dirty) {
+      // this._sankebar.openSnackBar('message:pleas commit the changes', 'warning')
+      return confirm('You have unsaved changes. Do you really want to leave?');
+    }
+    return true;
   }
 }
