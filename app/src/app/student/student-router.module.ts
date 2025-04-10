@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StdregistrationComponent } from './stdregistration/stdregistration.component';
 import { StdlistComponent } from './stdlist/stdlist.component';
+import { PreventDataLoosingGuard } from '../shared/service/prevent-data-loosing.guard';
 
 const studentRoutes: Routes = [
-   { path:'stdregistration', component:StdregistrationComponent },
-   { path:'stdlist', component: StdlistComponent }
+  {
+    path: 'stdregistration', component: StdregistrationComponent,
+    canDeactivate: [PreventDataLoosingGuard]
+  },
+
+  { path: 'stdlist', component: StdlistComponent }
+  
 ];
 
 @NgModule({
