@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { NonmagicNumber, Roles } from 'src/app/shared/const/global/app.const';
 import { NotificationService } from 'src/app/shared/service/notification.service';
 import { CanComponentDeactivate } from '../../shared/service/prevent-data-loosing.guard'
+import { ConfirmationService } from '../service/confirmation.service';
+import { Observable } from 'rxjs/internal/Observable';
 // import { Observable } from 'rxjs';
 // import { PreventDataLoosingGuard } from '../../shared/service/prevent-data-loosing.guard' 
 
@@ -22,7 +24,7 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
   public mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
   public charactutePattern = /^[A-Za-z]+$/;
 
-  constructor(private _fb: FormBuilder, private route: Router, private _sankebar: NotificationService) { }
+  constructor(private _fb: FormBuilder, private route: Router, private _sankebar: NotificationService,private confirmationService: ConfirmationService) { }
   // canDeactivate: () => boolean | Observable<boolean>;
 
   ngOnInit() {
@@ -103,11 +105,20 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
   }
 
   /* to prevent the data loosing  */
-  canDeactivate(): boolean {
+  canDeactivate(): Observable<boolean> | boolean {
     if (this.studentForm.dirty) {
-      // this._sankebar.openSnackBar('message:pleas commit the changes', 'warning')
-      return confirm('You have unsaved changes. Do you really want to leave?');
+      return this.confirmationService.confirm(
+        'You have unsaved changes. Do you really want to leave?',
+        'Unsaved Changes',
+        'Leave',
+        'Stay'
+      );
     }
     return true;
   }
+  //   if (this.studentForm.dirty) {
+  //     return confirm('You have unsaved changes. Do you really want to leave?');
+  //   }
+  //   return true;
+  // }
 }
