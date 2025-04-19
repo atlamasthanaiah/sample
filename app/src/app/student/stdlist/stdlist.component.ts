@@ -1,13 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-// import { CourseService } from '../service/course.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-// import {MatSort, Sort, } from '@angular/material/sort';
-// import { MatSort,Sort } from '@angular/material/sort';
 import { CourseService } from '../../project/services/course.service';
-import {Sort,MatSort, MatSortModule, MatSortable} from '@angular/material/sort';
-import { Student } from '../model/studet.model'
+import { Router } from '@angular/router';
+import { Student } from '../model/studet.model';
 
 @Component({
   selector: 'atla-stdlist',
@@ -15,61 +11,47 @@ import { Student } from '../model/studet.model'
   styleUrls: ['./stdlist.component.scss']
 })
 export class StdlistComponent implements OnInit {
-
-  displayedColumns : string[]= ['FirstName','LastName','Email','Phone','Country','Action']
+  displayedColumns_parent: string[] = ['firstName', 'lastName', 'email', 'phone', 'country', 'actions'];
+  dataSource_parent = new MatTableDataSource<Student>([]);
   isLoading = false;
-  
-  // pagination
-  dataSource : MatTableDataSource<Student>;
-  @ViewChild( MatPaginator ) paginator: MatPaginator;
-  @ViewChild( MatSort ) matsort: MatSort;
-  // SList: any;
-// 
-  // totalRecords: number = 0;
-  // pageSize: number = 5;
 
-  constructor(  private SList:CourseService, 
-    private route: Router ,
-    private AC:ActivatedRoute,
-   ){}
+  constructor(
+    private SList: CourseService,
+    private route: Router
+  ) {}
 
   ngOnInit(): void {
+    this.loadStudentData();
+  }
+
+  loadStudentData(): void {
+    this.isLoading = true;
     this.SList.getSList().subscribe({
-      next:((response:Student[]) =>{
-        // this.dataSource = response.studentList
-        this.dataSource = new MatTableDataSource(response);
-        // below code for pagination in angullar material
-        // this.dataSource = new MatTableDataSource(response.studentList)
-        this.dataSource.paginator = this.paginator;
-        // spinner
+      next: (response: any) => {
+        const studentArray = response?.studentList || [];
+        console.log('Received student data:', studentArray);
+        if (Array.isArray(studentArray)) {
+          this.dataSource_parent = new MatTableDataSource<Student>(studentArray);
+        }
         this.isLoading = false;
-        // sorting
-        this.dataSource.sort = this.matsort;
-        this.matsort.sort(({}) as unknown as MatSortable);
-        
-      })
-    })
-//     this.isLoading = true; 
-// this.SList.getSList().subscribe({
-//   next: ((response: Student) => {
-//     this.dataSource = response.studentList;
-//     this.dataSource = new MatTableDataSource(response.studentList)
-//     this.dataSource.paginator = this.paginator;
-//     this.dataSource.sort = this.matsort;
-//     this.isLoading = false;
-//   }),
-//   error: error => {
-//     console.error('Error fetching data:', error);
-//     this.isLoading = true;
-//   }
-// });
-
+      },
+      error: (error) => {
+        console.error('Error loading student data:', error);
+        this.isLoading = false;
+      }
+    });
   }
 
-  editData(row:any){
-    this.route.navigate(['/lik'])
-  }
-  searchData(e:any){
-    this.dataSource.filter = e.target.value;
+  // editData(row: any): void {
+  //   const student = row as Student;
+  //   if (student?.id) {
+  //     this.route.navigate(['/student/edit', student.id]);
+  //   } else {
+  //     console.error('Missing student ID:', row);
+  //   }
+  // }
+
+  editStudent(): void {
+    this.route.navigate(['/student/stdregistration']);
   }
 }

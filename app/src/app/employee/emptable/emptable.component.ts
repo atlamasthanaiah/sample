@@ -18,13 +18,32 @@ export class EmptableComponent implements OnInit {
   ngOnInit(): void {
     this.empservice.getAalldata().subscribe({
       next: (res) => {
-        this.dataSource_parent.data = res.employee; // Ensure this returns an array
+        const employeeData = res?.employee;
+  
+        if (Array.isArray(employeeData)) {
+          this.dataSource_parent.data = employeeData;
+        } else {
+          console.error('Invalid employee data format:', employeeData);
+          this.dataSource_parent.data = []; // fallback to empty array
+        }
       },
       error: (err) => {
         console.error('Failed to load employee data', err);
+        this.dataSource_parent.data = []; // also fallback in case of error
       }
     });
   }
+  
+  // ngOnInit(): void {
+  //   this.empservice.getAalldata().subscribe({
+  //     next: (res) => {
+  //       this.dataSource_parent.data = res.employee; // Ensure this returns an array
+  //     },
+  //     error: (err) => {
+  //       console.error('Failed to load employee data', err);
+  //     }
+  //   });
+  // }
 
   // onEdit(emp: Employee) {
   //   this.router.navigate(['/employee/edit', emp.id]);

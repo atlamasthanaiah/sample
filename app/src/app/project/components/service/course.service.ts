@@ -9,6 +9,8 @@ export class CourseService {
 
   private baseUrl = environment.MAIN_API_URL;    // this is real time (it means api calling different environments)
 
+  private apiUrl = 'assets/json';   //this is just code simplyfy this is also correct but in realtime need to use above structure.
+
   constructor(private http: HttpClient) { }
 
   getEmpInfo() {
@@ -25,8 +27,16 @@ export class CourseService {
     return this.http.get('../../../assets/json/course.json')
 
   }
+
+  // getSList() {
+  //   return this.http.get('../../../assets/json/stdList.json')
+  // }
+
+  /* this is reall time api calling  */
+  /*  */
+  
   getSList() {
-    return this.http.get('../../../assets/json/stdList.json')
+    return this.http.get<any>(`${this.apiUrl}/stdList.json`);
   }
 
   /* this is reall time api calling  */
