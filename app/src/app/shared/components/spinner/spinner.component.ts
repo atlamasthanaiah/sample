@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input  } from '@angular/core';
 
 @Component({
   selector: 'atla-spinner',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./spinner.component.scss']
 })
 export class SpinnerComponent {
+
+  // @Input() loading: boolean = false;
+  @Input() message: string = 'Loading...';
 
 }

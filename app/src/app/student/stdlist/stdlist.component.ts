@@ -11,9 +11,11 @@ import { Student } from '../model/studet.model';
   styleUrls: ['./stdlist.component.scss']
 })
 export class StdlistComponent implements OnInit {
-  displayedColumns_parent: string[] = ['firstName', 'lastName', 'email', 'phone', 'country', 'actions'];
-  dataSource_parent = new MatTableDataSource<Student>([]);
-  isLoading = false;
+
+  public displayedColumns_parent: string[] = ['firstName', 'lastName', 'email', 'phone', 'country', 'actions'];
+  public dataSource_parent = new MatTableDataSource<Student>([]);
+  public isLoading = true;
+  public error: string = ''; // NEW: Error state
 
   constructor(
     private SList: CourseService,
@@ -26,21 +28,54 @@ export class StdlistComponent implements OnInit {
 
   loadStudentData(): void {
     this.isLoading = true;
+    this.error = '';
+
     this.SList.getSList().subscribe({
       next: (response: any) => {
         const studentArray = response?.studentList || [];
-        console.log('Received student data:', studentArray);
-        if (Array.isArray(studentArray)) {
-          this.dataSource_parent = new MatTableDataSource<Student>(studentArray);
+
+        if (Array.isArray(studentArray) && studentArray.length > 0) {
+          this.dataSource_parent.data = studentArray;
+          this.isLoading = false;
+        } else {
+          // Wait 500ms before showing "no data" message to give spinner a moment
+          // setTimeout(() => {
+            this.dataSource_parent.data = [];
+            // this.error = 'No student data found.';
+            this.isLoading = true;
+          // }, 500);
         }
-        this.isLoading = false;
       },
-      error: (error) => {
-        console.error('Error loading student data:', error);
-        this.isLoading = false;
+      error: () => {
+        
+        this.dataSource_parent.data = [];
+        this.isLoading = true;
+        this.error = 'Failed to load student data.';
       }
     });
   }
+
+  // loadStudentData(): void {
+
+  //  this.isLoading = true;
+  //   this.error = '';
+
+  //   this.SList.getSList().subscribe({
+  //     next: (response: any) => {
+  //       const studentArray = response?.studentList || [];
+  //       console.log('Received student data:', studentArray);
+  //       if (Array.isArray(studentArray)) {
+  //         this.dataSource_parent = new MatTableDataSource<Student>(studentArray);
+  //       }
+  //        this.isLoading = false;
+  //     },
+  //     error: (error) => {
+  //       console.error('Error loading student data:', error);
+  //       this.dataSource_parent = new MatTableDataSource<Student>([]); 
+  //       this.isLoading = false;
+  //     }
+  //   });
+  // }
 
   // editData(row: any): void {
   //   const student = row as Student;

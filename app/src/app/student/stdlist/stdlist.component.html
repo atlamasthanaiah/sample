@@ -8,7 +8,19 @@
   </ol>
 </span>
 
-<atla-reusable-data-table
+<!-- reusable spinner -->
+<atla-spinner *ngIf="isLoading" [message]="'Loading student data...'"></atla-spinner>
+ <!-- <atla-spinner *ngIf="isLoading" [loading]="isLoading" [message]="'Loading student data...'"></atla-spinner> -->
+
+ <!-- Error display -->
+<div *ngIf="!isLoading && error" class="error-message">
+  <mat-icon color="warn">error</mat-icon>
+  {{ error }}
+</div>
+
+<!-- reusable data table -->
+<atla-reusable-data-table   
+  *ngIf="!isLoading && !error && dataSource_parent.data.length > 0"
   [displayedColumns]="displayedColumns_parent"
   [dataSource]="dataSource_parent">
   <ng-template #actionTemplate let-element>
@@ -21,3 +33,9 @@
     </button>
   </ng-template>
 </atla-reusable-data-table>
+
+<!-- Error message on API fail -->
+<!-- <div *ngIf="!isLoading && error" class="error-message">
+  <mat-icon color="warn">error</mat-icon>
+  {{ error }}
+</div> -->

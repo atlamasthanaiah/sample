@@ -1,0 +1,17 @@
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: #3f51b5;
+
+    .spinner {
+        animation: spin 1s linear infinite;
+    }
+
+    .spinner-message {
+        margin-top: 10px;
+        font-weight: 500;
+    }
+}
