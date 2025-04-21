@@ -43,6 +43,7 @@ const module = [
   MatPaginatorModule,
   MatInputModule,
   MatIconModule,
+  MatProgressSpinnerModule ,
   CustomRegisterModule
 ]
 

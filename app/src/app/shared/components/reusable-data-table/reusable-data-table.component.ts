@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ContentChild, TemplateRef,ViewChild, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, Input, ContentChild, TemplateRef,ViewChild, AfterViewInit,SimpleChanges  } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
@@ -22,7 +22,22 @@ export class ReusableDataTableComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // ngAfterViewInit(): void {
+  //   this.dataSource.paginator = this.paginator;
+  // }
   ngAfterViewInit(): void {
-    this.dataSource.paginator = this.paginator;
+    this.attachPaginator();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['dataSource']) {
+      this.attachPaginator();
+    }
+  }
+
+  private attachPaginator(): void {
+    if (this.dataSource && this.paginator) {
+      this.dataSource.paginator = this.paginator;
+    }
   }
 }
