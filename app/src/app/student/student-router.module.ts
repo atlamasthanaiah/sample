@@ -10,7 +10,7 @@ const studentRoutes: Routes = [
     canDeactivate: [PreventDataLoosingGuard]
   },
   // {
-  //   path: 'stdregistration/edit/:id', component: StdregistrationComponent,
+  //   path: 'stdregistration/:id', component: StdregistrationComponent,
   //   canDeactivate: [PreventDataLoosingGuard]
   // },
 
