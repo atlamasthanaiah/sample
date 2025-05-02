@@ -8,6 +8,10 @@
   </ol>
 </span>
 
+<!-- reusable search data -->
+
+<atla-reusable-searh  (searchTerm)="searchData($event)"></atla-reusable-searh>
+
 <!-- reusable spinner -->
 <atla-spinner *ngIf="isLoading" [message]="'Loading student data...'"></atla-spinner>
  <!-- <atla-spinner *ngIf="isLoading" [loading]="isLoading" [message]="'Loading student data...'"></atla-spinner> -->

@@ -86,7 +86,14 @@ export class StdlistComponent implements OnInit {
   //   }
   // }
 
+  /* getting the data from search compoent. implementing the search functionaliy */
+  searchData(value: string){
+    this.dataSource_parent.filter = value.trim().toLowerCase();
+  }
+
+
   editStudent(): void {
     this.route.navigate(['/student/stdregistration']);
   }
+
 }
