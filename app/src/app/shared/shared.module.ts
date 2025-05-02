@@ -22,6 +22,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { ReusableSearhComponent } from './components/reusable-searh/reusable-searh.component';
 
 //  import { EmpPipe } from '../employee/emp.pipe';
 // import { FlexLayoutModule } from '@angular/flex-layout';
@@ -56,6 +57,7 @@ const component = [
  AccessDeniedComponent,
  PageNotFoundComponent,
  ReusableDataTableComponent,
+ ReusableSearhComponent
 //  EmpPipe
 ]
 
