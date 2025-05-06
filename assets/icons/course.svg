@@ -1,0 +1,9 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Book shape -->
+    <rect x="30" y="40" width="140" height="100" fill="#FFD700" stroke="#000" stroke-width="2"/>
+    <line x1="30" y1="90" x2="170" y2="90" stroke="#000" stroke-width="2"/>
+    <!-- Graduation cap -->
+    <polygon points="100,20 50,50 150,50" fill="#000"/>
+    <rect x="90" y="50" width="20" height="30" fill="#000"/>
+    <circle cx="100" cy="85" r="5" fill="#FFD700"/>
+</svg>
