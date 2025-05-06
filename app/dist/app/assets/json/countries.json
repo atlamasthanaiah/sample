@@ -1,0 +1,42 @@
+[
+    {
+      "country": "India",
+      "states": [
+        {
+          "state": "Andrapradesh",
+          "cities": ["Nellore", "Prakasham", "Guntur","Tiripathi","Rajamandri"]
+        },
+        {
+          "state": "Teleengana",
+          "cities": ["Hydrabad", "Sangareddy", "Adilabad"]
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "states": [
+        {
+          "state": " Alabama",
+          "cities": ["Huntsville", "Montgomery", "Birmingham"]
+        },
+        {
+          "state": "Alaska",
+          "cities": ["Adak", "Akhiok", "Akiak"]
+        }
+      ]
+    },
+    {
+        "country": "United Kingdom",
+        "states": [
+          {
+            "state": " Angus",
+            "cities": ["Brechin", "Wellbank", "Aberlemno"]
+          },
+          {
+            "state": "Parries",
+            "cities": ["Bristol", "Bath", "Clevedon"]
+          }
+        ]
+      }
+  ]
+  
