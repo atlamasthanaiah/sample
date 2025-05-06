@@ -1,0 +1,53 @@
+{
+    "courseDetails" : [
+        {
+         "id" : "1",
+         "courseName" : "Angular",
+         "duration" : "60",
+         "couseStartDate" : "01-05-2000",
+         "courseEndDate" : "01-07-2000",
+         "time" : ""
+        },
+        {
+            "id" : "2",
+            "courseName" : "ReactJs",
+            "duration" : "60",
+            "couseStartDate" : "05-03-2000",
+            "courseEndDate" : "09-05-2000",
+            "time" : ""
+        },
+        {
+            "id" : "3",
+            "courseName" : "ReactJs",
+            "duration" : "33",
+            "couseStartDate" : "05-09-2020",
+            "courseEndDate" : "09-10-2000",
+            "time" : ""
+        },
+        {
+            "id" : "4",
+            "courseName" : "Angular",
+            "duration" : "45",
+            "couseStartDate" : "05-03-2001",
+            "courseEndDate" : "09-05-2001",
+            "time" : ""
+        },
+        {
+            "id" : "5",
+            "courseName" : "ReactJs",
+            "duration" : "30",
+            "couseStartDate" : "05-03-2001",
+            "courseEndDate" : "09-04-2001",
+            "time" : ""
+        },
+        {
+            "id" : "6",
+            "courseName" : "Angular",
+            "duration" : "60",
+            "couseStartDate" : "05-03-2002",
+            "courseEndDate" : "09-05-2002",
+            "time" : ""
+        }
+       
+    ]
+ }

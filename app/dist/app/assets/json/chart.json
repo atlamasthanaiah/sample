@@ -1,0 +1,12 @@
+[
+    {
+        "sales":[
+            { "year": 2001,"amount":10000,"color":"green"},
+            { "year": 2002,"amount":2000,"color":"green"},
+            { "year": 2003,"amount":5000,"color":"green"},
+            { "year": 2004,"amount":7000,"color":"green"},
+            { "year": 2005,"amount":9000,"color":"green"},
+            { "year": 2006,"amount":5000,"color":"green"}
+        ]
+    }
+]
