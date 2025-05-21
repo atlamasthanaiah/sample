@@ -5,6 +5,8 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { MatIconModule } from '@angular/material/icon';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { GlobalerrorInterceptor } from './services/globalerror.interceptor';
 // import { EmpPipe } from './emp.pipe';
 
 const components = [
@@ -22,6 +24,13 @@ const imports = [
 @NgModule({
   declarations: [ ...components, ],
   imports: [ ...imports ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: GlobalerrorInterceptor,
+      multi: true
+    }
+  ]
   // providers: [ ...providers ]
 })
 export class EmployeeModule { }
