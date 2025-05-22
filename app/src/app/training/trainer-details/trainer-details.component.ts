@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { TrainerDetails } from '../../training/models/trainer-details';
 import { MatSort } from '@angular/material/sort';
+import { NotificationService } from 'src/app/shared/service/notification.service';
+import { Message } from 'src/app/shared/const/global/app.const';
 
 @Component({
   selector: 'atla-trainer-details',
@@ -24,7 +26,7 @@ export class TrainerDetailsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) matsort: MatSort;
 
-  constructor(private tds: TrainerDetailsService) {}
+  constructor( private tds: TrainerDetailsService, private notification:NotificationService ) {}
 
   ngOnInit(): void {
     this.setDisplayedColumns();
@@ -48,9 +50,11 @@ export class TrainerDetailsComponent implements OnInit, AfterViewInit {
         this.dataSource = new MatTableDataSource(response);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.matsort;
+        this.notification.openSnackBar(Message.SUCCESS, 'success')
       },
       error: (error) => {
         console.error('Error loading trainer details:', error);
+        this.notification.openSnackBar('Invalid data format', 'error');
       },
     });
   }

@@ -21,7 +21,8 @@ export const Message = {
     ACCESS_DENIED : 'Access Denied',
     RESOURCE_NOT_FOUND : 'Resource Not Found',
     INTERNAL_SERVER_ERROR : 'Internal Server Error',
-    SERVER_UNREACHABLE : 'Server unreachable'
+    SERVER_UNREACHABLE : 'Server unreachable',
+    UNABLE_TO_LOAD_DATA : 'Unable to load the data'
 }
 
 export const NonmagicNumber = {
