@@ -4,6 +4,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CourseService } from '../../project/services/course.service';
 import { Router } from '@angular/router';
 import { Student } from '../model/studet.model';
+import { NotificationService } from 'src/app/shared/service/notification.service';
+import { Message } from 'src/app/shared/const/global/app.const';
 
 @Component({
   selector: 'atla-stdlist',
@@ -19,7 +21,8 @@ export class StdlistComponent implements OnInit {
 
   constructor(
     private SList: CourseService,
-    private route: Router
+    private route: Router,
+    private notification:NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -37,12 +40,15 @@ export class StdlistComponent implements OnInit {
         if (Array.isArray(studentArray) && studentArray.length > 0) {
           this.dataSource_parent.data = studentArray;
           this.isLoading = false;
+          this.notification.openSnackBar(Message.SUCCESS, 'success');
         } else {
           // Wait 500ms before showing "no data" message to give spinner a moment
           // setTimeout(() => {
             this.dataSource_parent.data = [];
             // this.error = 'No student data found.';
+            
             this.isLoading = true;
+            // this.notification.openSnackBar(Message.SUCCESS, 'success');
           // }, 500);
         }
       },
@@ -51,6 +57,7 @@ export class StdlistComponent implements OnInit {
         this.dataSource_parent.data = [];
         this.isLoading = true;
         this.error = 'Failed to load student data.';
+        this.notification.openSnackBar(Message.UNABLE_TO_LOAD_DATA, 'error');
       }
     });
   }
