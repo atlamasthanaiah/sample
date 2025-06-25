@@ -99,8 +99,8 @@ export class StdlistComponent implements OnInit {
   }
 
 
-  editStudent(): void {
-    this.route.navigate(['/student/stdregistration']);
+  editStudent(studentId:any): void {
+    this.route.navigate(['/student/stdregistration/edit',studentId]);
   }
 
 }
