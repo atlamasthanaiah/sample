@@ -28,7 +28,7 @@
   [displayedColumns]="displayedColumns_parent"
   [dataSource]="dataSource_parent">
   <ng-template #actionTemplate let-element>
-    <button mat-icon-button color="primary" (click)="editStudent()">
+    <button mat-icon-button color="primary" (click)="editStudent(element.id)">
       <!-- (click)="editData(element)" (click)="editStudent(element.id)"-->
       <mat-icon>edit</mat-icon>
     </button>

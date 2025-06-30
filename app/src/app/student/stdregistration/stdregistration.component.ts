@@ -17,7 +17,7 @@ import { Student } from '../model/studentListData.model';
   templateUrl: './stdregistration.component.html',
   styleUrls: ['./stdregistration.component.scss']
 })
-export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
+export class StdregistrationComponent implements OnInit, CanComponentDeactivate {
 
   public studentForm: FormGroup;
   public formSubmitted = false;
@@ -26,9 +26,11 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
   public pinvalue = "^((\\+91-?)|0)?[0-9]{6}$";
   public mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
   public charactutePattern = /^[A-Za-z]+$/;
-  public studentId: string | null = null;;
+  public studentId: number | null = null;;
 
-  constructor(private _fb: FormBuilder, private route: Router, 
+  // public stdId: any;
+
+  constructor(private _fb: FormBuilder, private route: Router,
     private _sankebar: NotificationService,
     private confirmationService: ConfirmationService,
     private AC: ActivatedRoute,
@@ -43,8 +45,13 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
     //     this.loadStudent(this.studentId);
     //   }
     // });
-
-    
+    this.AC.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+        this.studentId = +id;
+        this.loadStudent(id);  // ✅ Load data based on ID
+      }
+    });
   }
 
   saveStudentForm() {
@@ -53,10 +60,10 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
     // }
     // if(Roles === Roles.Fundamental){}
     this.studentForm = this._fb.group({
-      
+
       firstName: ['', [Validators.required, Validators.maxLength(NonmagicNumber.EHIGHT), Validators.pattern(this.charactutePattern)]],
       lastName: ['', [Validators.required, Validators.maxLength(NonmagicNumber.TWENTY), Validators.pattern(this.charactutePattern)]],
-      gender : [],
+      gender: [],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern(this.mobNumberPattern)]],
       country: [''],
@@ -70,7 +77,7 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
       city: [],
       ruralorurban: []
     })
-    console.log("getting reg form data",this.studentForm.value)
+    console.log("getting reg form data", this.studentForm.value)
   }
 
   show($event) {
@@ -112,9 +119,9 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
     return true
   }
   /// get registration form details. what data enter user for registration
-  getData(){
+  getData() {
     // this.studentForm.value()
-    console.log("getting reg form data",this.studentForm.value)
+    console.log("getting reg form data", this.studentForm.value)
     //output
     //getting reg form data {firstName: 'atla', lastName: 'masthanaiah', gender: null, email: '', phone: '', …}block: ""city: nullcountry: ""email: ""firstName: "atla"gender: nulllastName: "masthanaiah"locality: ""municipality: ""phone: ""pincode: ""ruralorurban: nullstreet: ""village: ""ward: ""[[Prototype]]: Object           
   }
@@ -151,7 +158,25 @@ export class StdregistrationComponent implements OnInit,CanComponentDeactivate {
       const student = res.studentList.find((s: Student) => s.id == id);
       if (student) {
         this.studentForm.patchValue(student);
+
+        // Optional: Toggle UI visibility based on value
+        if (student.ruralorurban === '1') {
+          this.urban = true;
+          this.rural = false;
+        } else if (student.ruralorurban === '2') {
+          this.rural = true;
+          this.urban = false;
+        }
       }
     });
   }
+
+  // loadStudent(id: string) {
+  //   this.service.getSList().subscribe(res => {
+  //     const student = res.studentList.find((s: Student) => s.id == id);
+  //     if (student) {
+  //       this.studentForm.patchValue(student);
+  //     }
+  //   });
+  // }
 }
